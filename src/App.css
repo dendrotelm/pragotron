@@ -1,0 +1,68 @@
+/* App.css */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Żadnego scrollowania, to jest gra */
+  background-color: #000;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.game-container {
+  position: relative;
+}
+
+/* Świecący efekt na ekranie w świecie 3D */
+.monitor-glow {
+  background-color: #050505;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(255, 179, 0, 0.2);
+}
+
+/* Interfejs 2D nałożony na kamerę (np. twój panel kontrolny) */
+.overlay-ui {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 600px;
+  background: rgba(10, 10, 10, 0.85);
+  border: 1px solid #ffb300;
+  padding: 20px;
+  color: #ffb300;
+  pointer-events: auto;
+  z-index: 10;
+}
+
+.overlay-ui h2 {
+  font-size: 1rem;
+  margin-top: 0;
+  text-align: center;
+}
+
+/* Stylizacja samych przycisków i tekstu */
+.control-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #333;
+  padding: 5px 0;
+}
+
+button {
+  background: transparent;
+  color: #ffb300;
+  border: 1px solid #ffb300;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+button:hover {
+  background: #ffb300;
+  color: #000;
+} 
